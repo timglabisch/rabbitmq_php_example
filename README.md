@@ -31,17 +31,17 @@ Nutzt man eine VM müssen entsprechende Port forwardings eingerichtet werden.
 
 ## Worker und Producer ausprobieren
 
-Bei Bedard die IP's in worker.php / consumer.php anpassen.
+Bei Bedarf die IP's in worker.php / consumer.php anpassen.
 
 `php producer.php` ausführen, sollte rund 2-5 Sekunden dauern, danach sollten im Admin Bereich RabbitMQ 10.000 Nachrichten angekommen sein.  
 `php worker.php` ausführen, hier sollten einige Nachrichten aus der Queue entfernt werden. Der Worker bricht zu einem Prozent mit einer Exception ab um Fehler zu simulieren.
 
 Produktiv würde man z.B. mittels supervisord die Worker starten.  
-eine Beispielkonfiguration liegt vor: `supervisord -n -c supervisord.conf`
+Eine Beispielkonfiguration liegt vor: `supervisord -n -c supervisord.conf`
 
 ## Performance
 - Auf meinem lokalen System sind 600 - 900 m/s kein Problem.
-- Queues können ohne Probleme auf mehrere hunder tausend anwachsen.
+- Queues können ohne Probleme auf mehrere hunder tausend Jobs anwachsen.
 
 ## Vorteile
 - Die Implementation ist selten einfach (wenige Zeilen PHP).
