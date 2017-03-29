@@ -1,0 +1,24 @@
+{
+    "name": "tim/protobuf_example",
+    "type": "project",
+    "require": {
+        "google/protobuf": "*",
+        "php-amqplib/php-amqplib": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "timglabisch",
+            "email": "tim@ainfach.de"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Tg\\Rabbit\\": "src/"
+        },
+        "files": [
+            "src/Generated/jobs.pb.php"
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package Tg.Rabbit.Generated;
+
+message HelloJob {
+    string some_data = 1;
+}
